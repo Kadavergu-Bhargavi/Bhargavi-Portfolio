@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Excel Dashboard",
+    "description": "Created an interactive Excel-based performance dashboard, utilizing advanced formulas, conditional formatting, and data visualization techniques to track and evaluate business performance, resulting in improved data analysis and insights.",
+    "image": "pictures/exceldashboard.jpg",
+    "icon": "fa-solid  fa-table-columns"
+  },
+
+  {
+    "title": "RSVP Dashboard",
+    "description": "RSVP Movies: Analyzed 2019-2021 data using Power BI, identifying top 3 genres driving 40% revenue, optimizing marketing for 25% international market share growth, and revealing 30% budget-success correlation, enhancing data-driven decisions by 90%. Cleaned dataset in Excel.",
+    "image": "pictures/rsvp.jpg",
+    "icon": "fa-solid fa-video"
+  },
+  {
+    "title": "Adidas Dashboard",
+    "description": "Adidas US Sales Analysis: Utilized Power BI to uncover sales trends, operational efficiency, and profitability across regions, products, and retailers. Cleaned dataset in Excel. Identified top-performing areas, seasonal trends, and growth opportunities to optimize sales strategy.",
+    "image": "pictures/adidas.jpg",
+    "icon": "fa-solid fa-shop"
+  },
+
+  {
+    "title": "E-commerce using SQL",
+    "description": "Ecommerce Customer Analysis: Utilized SQL Workbench to query, analyze, and visualize customer data, demonstrating expertise in SQL, data modeling, and analytical problem-solving to inform business growth strategies.",
+    "image": "pictures/sql.jpg",
+    "icon": "fa-solid  fa-database"
+  },
+
+  {
+    "title": "Python Project",
+    "description": "CardioGoodFitness Customer Profiling: Analyzed demographic and behavioural data in Jupyter Notebook to identify patterns. Uncovered key customer segments, usage patterns, fitness correlations, and income-driven purchasing decisions, informing targeted marketing strategies for a 25% customer acquisition boost and a 15% retention increase.",
+    "image": "pictures/python.jpg",
+    "icon": "fa-solid fa-brands fa-python"
+  }
+]

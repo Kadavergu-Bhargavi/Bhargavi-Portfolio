@@ -1,0 +1,26 @@
+[
+  {
+    "icon": "fa-solid fa-magnifying-glass-chart",
+    "title": "Data Analytics",
+    "description": " I offer data analytics services to help organizations make sense of their data. I provide solutions using tools like Excel, Power BI. With skills in data analysis, visualization, and storytelling, I help businesses uncover insights and make informed decisions.",
+    "link": "#"
+  },
+  {
+    "icon": "fa-solid fa-code",
+    "title": "Web Development",
+    "description": "I offer custom website design, responsive development, e-commerce integration, and CMS setup. I optimize for performance, security, and SEO, ensuring your site is robust and user-friendly. I provide ongoing maintenance and support to keep your web presence strong.",
+    "link": "#"
+  },
+  {
+    "icon": "fa-brands fa-react",
+    "title": "ReactJS",
+    "description": "I specialize in ReactJS development, building dynamic and responsive web applications. With a focus on component-based architecture, I create reusable and efficient code. My expertise includes integrating APIs, state management, and ensuring high performance for a seamless user experience.",
+    "link": "#"
+  },
+  {
+    "icon": "fa-regular fa-crop-simple",
+    "title": "UI/UX Designing",
+    "description": "I specialize in UI/UX design, creating intuitive and visually appealing interfaces that enhance user experience. I focus on user research, prototyping, and usability testing to ensure designs meet user needs. My goal is to make your product both beautiful and functional, ensuring a seamless and engaging user experience.",
+    "link": "#"
+  }
+]

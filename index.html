@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- MAIN CSS  -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Bhargavi's Portfolio</title>
+    <link rel="icon" href="pictures\portfolio.jpg" type="image/jpg" />
+  </head>
+  <body>
+    <!-- HEADER DESIGN -->
+    <header class="header">
+      <a href="#" class="logo">My Portfolio</a>
+
+      <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HOME SECTION DESIGN -->
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>Hi, I'm</h3>
+        <h1>Bhargavi</h1>
+        <h3>And I'm a <span class="multiple-text">Data Analyst</span></h3>
+        <p>
+          with a knack for crafting engaging and user-friendly websites. Check
+          out my portfolio to discover my latest projects and the innovative
+          solutions I've developed
+        </p>
+        <div class="social-media">
+          <a
+            href="https://www.linkedin.com/in/bhargavi-kadavergu"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/Kadavergu-Bhargavi" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </div>
+        <a href="pictures/Bhargavi Resume.pdf" download class="btn"
+          >Download Resume</a
+        >
+      </div>
+      <div class="home-img">
+        <img src="pictures/pic1.jpg" alt="" />
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION DESIGN -->
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="pictures/pic2.jpg" alt="" />
+      </div>
+      <div class="about-content">
+        <h2 class="heading">ABOUT <span>ME</span></h2>
+        <h3>Insight Crafter</h3>
+        <p>
+          As a versatile professional with a strong foundation in both data
+          analytics and frontend development, I thrive at the intersection of
+          technology and user experience. My expertise in data analysis allows
+          me to extract meaningful insights from complex datasets, enabling
+          informed decision-making and driving business success. Simultaneously,
+          my skills as a frontend developer empower me to transform those
+          insights into engaging, user-friendly web applications. By blending
+          analytical thinking with creative design, I create solutions that not
+          only meet user needs but also enhance overall functionality and
+          performance. I am passionate about leveraging data to inform design
+          choices, ensuring that each project I undertake is both impactful and
+          visually appealing.
+        </p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION DESIGN -->
+    <section class="services" id="services">
+      <h2 class="heading">My<span>Services</span></h2>
+      <div class="services-container" id="services-container">
+        <script>
+          fetch("services.json")
+            .then((response) => response.json())
+            .then((data) => {
+              const servicesContainer =
+                document.getElementById("services-container");
+              data.forEach((service) => {
+                const serviceBox = document.createElement("div");
+                serviceBox.classList.add("services-box");
+
+                // Set up inner HTML for each service
+                serviceBox.innerHTML = `
+                  <i class="${service.icon || ""}"></i>
+                  <h3>${service.title}</h3>
+                  <p>${service.description}</p>
+                  ${
+                    service.sourceLink
+                      ? `<a href="${service.sourceLink}" class="btn">View Source</a>`
+                      : ""
+                  }
+                  ${
+                    service.demoLink
+                      ? `<a href="${service.demoLink}" class="btn">View Demo</a>`
+                      : ""
+                  }
+                `;
+
+                servicesContainer.appendChild(serviceBox);
+              });
+            })
+            .catch((error) => console.error("Error fetching services:", error));
+        </script>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION DESIGN -->
+    <section class="portfolio" id="portfolio">
+      <h2 class="heading">Latest <span>Projects</span></h2>
+      <div class="portfolio-container">
+        <!-- Project 1: Color Generator -->
+        <div class="portfolio-item">
+          <div class="portfolio-box">
+            <img src="pictures/work1.jpg" alt="Color Generator Project" />
+            <div class="portfolio-layer">
+              <h4>Color Generator</h4>
+              <p>
+                Developed a web application using ReactJS where users can
+                generate different color shades based on the input color code
+                they provide. Implemented features for dynamically generating
+                shades and tints of the input color, offering users a customized
+                color palette. Designed an intuitive user interface for seamless
+                interaction.
+              </p>
+              <i class="fa-solid fa-palette"></i>
+            </div>
+          </div>
+          <div class="lnks">
+            <a
+              href="https://github.com/Kadavergu-Bhargavi/react-js-color-generator"
+              class="btn"
+              target="_blank"
+              >Source</a
+            >
+            <a
+              href="https://color-generator-bhargavi.netlify.app/"
+              class="btn"
+              target="_blank"
+              >Demo</a
+            >
+          </div>
+        </div>
+
+        <!-- Project 2: Grocery Bud -->
+        <div class="portfolio-item">
+          <div class="portfolio-box">
+            <img src="pictures/work2.jpg" alt="Grocery Bud Project" />
+            <div class="portfolio-layer">
+              <h4>Grocery Bud</h4>
+              <p>
+                Created a dynamic web application using ReactJS allowing users
+                to manage their grocery lists efficiently. Implemented
+                functionalities for adding, deleting, and editing items on the
+                list, providing users with a seamless shopping experience.
+                Incorporated a feature to clear the entire list with a single
+                click for added convenience.
+              </p>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div>
+          <div class="lnks">
+            <a
+              href="https://github.com/Kadavergu-Bhargavi/grocery-bud-task3"
+              class="btn"
+              target="_blank"
+              >Source</a
+            >
+            <a
+              href="https://grocery-bud-bhargavi.netlify.app/"
+              class="btn"
+              target="_blank"
+              >Demo</a
+            >
+          </div>
+        </div>
+
+        <!-- Project 3: Menu -->
+        <div class="portfolio-item">
+          <div class="portfolio-box">
+            <img src="pictures/work3.jpg" alt="Menu Project" />
+            <div class="portfolio-layer">
+              <h4>Menu</h4>
+              <p>
+                This project features an interactive main menu built with HTML,
+                CSS, and ReactJS. It displays product prices, images, and
+                details. Users can easily filter products to find exactly what
+                they need. The responsive design ensures an optimal viewing
+                experience on any device, making product browsing efficient and
+                enjoyable.
+              </p>
+              <i class="fa-solid fa-bowl-food"></i>
+            </div>
+          </div>
+          <div class="lnks">
+            <a
+              href="https://github.com/Kadavergu-Bhargavi/react-js-menu"
+              class="btn"
+              target="_blank"
+              >Source</a
+            >
+            <a
+              href="https://menu-reactjs-bhargavi.netlify.app/"
+              class="btn"
+              target="_blank"
+              >Demo</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- JavaScript to Fetch and Display Additional Portfolio Projects from JSON -->
+      <script>
+        fetch("portfolio.json")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            const portfolioContainer = document.querySelector(
+              ".portfolio-container"
+            );
+            data.forEach((project) => {
+              const projectBox = document.createElement("div");
+              projectBox.classList.add("portfolio-item");
+
+              // Create project content
+              let projectHTML = `
+                <div class="portfolio-box">
+                  <img src="${project.image}" alt="${project.title}" />
+                  <div class="portfolio-layer">
+                    <h4>${project.title}</h4>
+                    <p>${project.description}</p>
+                    <i class="${project.icon || ""}"></i>
+                  </div>
+                </div>
+              `;
+
+              // Initialize links HTML
+              let linksHTML = '<div class="lnks">';
+
+              // Check for source link and add if it exists
+              if (project.sourceLink) {
+                linksHTML += `<a href="${project.sourceLink}" class="btn" target="_blank">Source</a>`;
+              }
+
+              // Check for demo link and add if it exists
+              if (project.demoLink) {
+                linksHTML += `<a href="${project.demoLink}" class="btn" target="_blank">Demo</a>`;
+              }
+
+              // Close the links div only if there are buttons added
+              linksHTML += "</div>";
+
+              // Combine project HTML with links HTML
+              projectBox.innerHTML = projectHTML + linksHTML;
+              portfolioContainer.appendChild(projectBox);
+            });
+          })
+          .catch((error) => console.error("Error fetching portfolio:", error));
+      </script>
+    </section>
+
+    <!--CONTACT SECTION DESIGN -->
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact<span>Me</span></h2>
+
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input
+          type="hidden"
+          name="access_key"
+          value="1cad039d-f758-49bf-b83a-92e6a2db63e6"
+        />
+        <div class="input-box">
+          <input type="text" name="fullname" placeholder="Full Name" />
+          <input type="email" name="email" placeholder="Email Address" />
+          <input type="number" name="phonenumber" placeholder="Mobile Number" />
+        </div>
+        <textarea
+          name="message"
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Your Message"
+        ></textarea>
+        <input type="submit" value="Send Message" class="btn" />
+      </form>
+    </section>
+    <!-- FOOTER DESIGN -->
+
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copyright &copy; 2024 | All Rights Reserved.</p>
+      </div>
+
+      <div class="footer-iconTop">
+        <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+      </div>
+    </footer>
+
+    <!-- SCROLL REVEAL  JS -->
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- TYPED  JS -->
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- MAIN JS -->
+
+    <script src="main.js"></script>
+  </body>
+</html>
